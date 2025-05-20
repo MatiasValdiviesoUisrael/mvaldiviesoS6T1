@@ -25,4 +25,9 @@ public partial class vEstudiante : ContentPage
         estudiantes = new ObservableCollection<Estudiante>(lista);
         listaEstudiantes.ItemsSource = estudiantes;
     }
+
+    private void btnAgregar_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new agregarEstudiante());
+    }
 }

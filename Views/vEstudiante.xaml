@@ -47,6 +47,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+		<button x:Name ="btnagregar" Text="Agregar" clicked="btnAgregar_clicked"/>
 
     </VerticalStackLayout>
 
