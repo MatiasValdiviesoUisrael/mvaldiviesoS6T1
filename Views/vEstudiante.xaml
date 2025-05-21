@@ -15,6 +15,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Label x:Name="lblECedula" Text="Cédula" Grid.Column="0"/>
@@ -22,7 +23,7 @@
             <Label x:Name="lblEApellido" Text="Apellido" Grid.Column="2"/>
             <Label x:Name="lblEEdad" Text="Edad" Grid.Column="3"/>
         </Grid>
-        <ListView x:Name="listaEstudiantes">
+        <ListView x:Name="listaEstudiantes" ItemSelected="listaEstudiantes_ItemSelected">
             
             <ListView.ItemTemplate>
                 <DataTemplate>

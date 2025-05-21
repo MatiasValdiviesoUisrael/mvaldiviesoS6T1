@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
+using AndroidX.Navigation;
 using mvaldiviesoS6T1.Models;
 using Newtonsoft.Json;
 
@@ -29,5 +30,11 @@ public partial class vEstudiante : ContentPage
     private void btnAgregar_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new agregarEstudiante());
+    }
+
+    private void listaEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        var objetoEstudiante = (Estudiante)e.SelectedItem;
+        Navegation.PushAsync(new editarEstudiante(objetoEstudiante));
     }
 }

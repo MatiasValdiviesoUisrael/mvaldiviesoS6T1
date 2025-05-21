@@ -1,13 +1,18 @@
+using mvaldiviesoS6T1.Models;
 using System.Net;
 
 namespace mvaldiviesoS6T1.Views;
 
 public partial class agregarEstudiante : ContentPage
 {
-	public agregarEstudiante()
+	public agregarEstudiante(Estudiante datos)
 	{
 		InitializeComponent();
-	}
+        txtNombre.Text = datos.nombre;
+        txtApellido.Text = datos.apellido;
+        txtCedula.Text = datos.cedula;
+        txtEdad.Text = datos.edad.ToString();
+    }
 
 	private void btnAgregar_Clicked(object sender, EventArgs e)
     {
