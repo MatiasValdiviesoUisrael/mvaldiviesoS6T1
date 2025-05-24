@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mvaldiviesoS6T1.Views.vAñadirEstudiante"
+             Title="vAñadirEstudiante">
+    <VerticalStackLayout Spacing="20" Padding="20">
+        <Label 
+            Text="Añadir Estudiante"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Label Text="Cedula" />
+        <Entry x:Name="txtcedula" Placeholder="Ingresar cédula"/>
+        <Label Text="Nombre"/>
+        <Entry x:Name="txtnombre" Placeholder="Ingresar nombre"/>
+        <Label Text="Apellido" />
+        <Entry x:Name="txtapellido" Placeholder="Ingresar apellido"/>
+        <Label Text="Edad"/>
+        <Entry x:Name="txtedad" Placeholder="Ingresar edad"/>
+
+        <Button x:Name="btnAñadir" Text="Añadir estudiante" Clicked="btnAñadir_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

@@ -8,6 +8,7 @@ namespace mvaldiviesoS6T1.Models
 {
     public class Estudiante
     {
+        public int codigo { get; set; }
         public string cedula { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }

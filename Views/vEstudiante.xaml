@@ -15,15 +15,16 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label x:Name="lblECedula" Text="Cédula" Grid.Column="0"/>
-            <Label x:Name="lblENombre" Text="Nombre" Grid.Column="1"/>
-            <Label x:Name="lblEApellido" Text="Apellido" Grid.Column="2"/>
-            <Label x:Name="lblEEdad" Text="Edad" Grid.Column="3"/>
+            <Label x:Name="lblEID" Text="ID" Grid.Column="0"/>
+            <Label x:Name="lblECedula" Text="Cedula" Grid.Column="1"/>
+            <Label x:Name="lblENombre" Text="Nombre" Grid.Column="2"/>
+            <Label x:Name="lblEApellido" Text="Apellido" Grid.Column="3"/>
+            <Label x:Name="lblEEdad" Text="Edad" Grid.Column="4"/>
         </Grid>
-        <ListView x:Name="listaEstudiantes">
-            
+        <ListView x:Name="listaEstudiantes" ItemSelected="listaEstudiantes_ItemSelected">            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -35,18 +36,21 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
 
-                                <Label x:Name="lblCedula" Text="{Binding cedula}" Grid.Column="0"/>
-                                <Label x:Name="lblNombre" Text="{Binding nombre}" Grid.Column="1"/>
-                                <Label x:Name="lblApellido" Text="{Binding apellido}" Grid.Column="2"/>
-                                <Label x:Name="lblEdad" Text="{Binding edad}" Grid.Column="3"/>
+                                <Label x:Name="lblID" Text="{Binding codigo}" Grid.Column="0"/>
+                                <Label x:Name="lblCedula" Text="{Binding cedula}" Grid.Column="1"/>
+                                <Label x:Name="lblNombre" Text="{Binding nombre}" Grid.Column="2"/>
+                                <Label x:Name="lblApellido" Text="{Binding apellido}" Grid.Column="3"/>
+                                <Label x:Name="lblEdad" Text="{Binding edad}" Grid.Column="4"/>
                             </Grid>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button x:Name="btnNuevo" Text="Añadir nuevo estudiante" Clicked="btnNuevo_Clicked"/>
 
     </VerticalStackLayout>
 
