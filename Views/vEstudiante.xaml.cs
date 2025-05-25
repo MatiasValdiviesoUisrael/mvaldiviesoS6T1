@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Runtime.CompilerServices;
+using AndroidX.Navigation;
 using mvaldiviesoS6T1.Models;
 using Newtonsoft.Json;
 
@@ -24,16 +25,5 @@ public partial class vEstudiante : ContentPage
 		List<Estudiante> lista = JsonConvert.DeserializeObject<List<Estudiante>>(content);
         estudiantes = new ObservableCollection<Estudiante>(lista);
         listaEstudiantes.ItemsSource = estudiantes;
-    }
-
-    private void btnNuevo_Clicked(object sender, EventArgs e)
-    {
-		Navigation.PushAsync(new vAñadirEstudiante());
-    }
-
-    private void listaEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-    {
-		var objEstudiante = (Estudiante)e.SelectedItem;
-		Navigation.PushAsync(new vActualizarEliminarEstudiante(objEstudiante));
     }
 }

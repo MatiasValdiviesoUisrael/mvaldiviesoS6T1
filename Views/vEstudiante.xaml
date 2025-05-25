@@ -24,7 +24,8 @@
             <Label x:Name="lblEApellido" Text="Apellido" Grid.Column="3"/>
             <Label x:Name="lblEEdad" Text="Edad" Grid.Column="4"/>
         </Grid>
-        <ListView x:Name="listaEstudiantes" ItemSelected="listaEstudiantes_ItemSelected">            
+        <ListView x:Name="listaEstudiantes">
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -50,7 +51,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="btnNuevo" Text="Añadir nuevo estudiante" Clicked="btnNuevo_Clicked"/>
 
     </VerticalStackLayout>
 
